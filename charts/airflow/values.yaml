@@ -61,7 +61,12 @@ airflow:
   ##     # ether environment variables
   ##     HTTP_PROXY: "http://proxy.example.com:8080"
   ##
-  config: {}
+  config: 
+    AIRFLOW__CORE__MAX_MAP_LENGTH: "3500"
+    
+    #sentry configs
+    AIRFLOW__SENTRY__SENTRY_ON: "False"
+    AIRFLOW__SENTRY__SENTRY_DSN: "https://013b8b401d3446fab5a511616ffca50b@o4504870500892672.ingest.sentry.io/4504870513147904"
 
   ## a list of users to create
   ## - templates can ONLY be used in: `password`, `email`, `firstName`, `lastName`
